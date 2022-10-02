@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
+  <!-- Load the MobileNet model. -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Please upload a picture</h1>
+
+    <div class="drop-zone">
+      <span class="drop-zone__prompt">Drag & drop or click here to upload a picture</span>
+      <input type="file" accept="image/*" name="myFile" id="img1" onchange="loadFile(event)"
+      class="drop-zone__input">
+    </div>
+
+
+    <div class="content">
+        <p id="prediction">Prediction</p>
+        <div class="form">
+            <button id="submit_button">Go!</button>
+        </div>
+        <img id="img" crossorigin="anonymous"></img>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
